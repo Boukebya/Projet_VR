@@ -10,12 +10,13 @@ public class Movement : MonoBehaviour
     //current waypoint
     public int currentWaypoint = 0;
     
+    
     public float speed;
 
     void Start()
     {
         //get speed from Stat
-        speed = GetComponent<Stat>().actualSpeed;
+        speed = GetComponent<Stat>().speed;
         
         //get waypoints from path
         Transform[] pathTransforms = path.GetComponentsInChildren<Transform>();
@@ -24,10 +25,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //get speed from Stat
-        speed = GetComponent<Stat>().actualSpeed;
-    
-    
         //follow waypoints
         if (currentWaypoint < path.transform.childCount)
         {

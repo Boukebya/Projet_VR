@@ -7,7 +7,6 @@ TagManager:
   - Projectile
   - Enemy
   - Floor
-  - Baricade
   layers:
   - Default
   - TransparentFX

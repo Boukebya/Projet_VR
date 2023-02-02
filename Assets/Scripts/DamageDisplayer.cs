@@ -27,8 +27,6 @@ public class DamageDisplayer : MonoBehaviour
         {
             text.color = Color.red;
         }
-        //set isCrit to false
-        transform.parent.GetComponent<Stat>().isCrit = false;
         //destroy the text after 1 second
         Destroy(gameObject, 1f);
         //separate the text from the parent
