@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abb9b6768d09b5b4da860a9da243e6ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0.2
+  damage: 1
   critChance: 0
   slow: 0.3
   baricade: {fileID: 205305204}
