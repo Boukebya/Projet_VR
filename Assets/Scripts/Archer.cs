@@ -7,6 +7,8 @@ public class Archer : MonoBehaviour
     public int damage;
     public float attackSpeed;
     public float range = 100;
+    public float critChance = 0.05f;
+    
     public Transform firePoint;
     public GameObject arrowPrefab;
     //get line renderer from children
@@ -73,7 +75,16 @@ public class Archer : MonoBehaviour
             float x = Mathf.Cos(angle) * range;
             float z = Mathf.Sin(angle) * range;
             lineRenderer.SetPosition(i, new Vector3(x, 0, z));
-        }               
+        }     
+        //if left mouse button is pressed upgrade tower by increasing range,damage and attack speed
+        if (Input.GetMouseButtonDown(0))
+        {
+            range += 10;
+            damage += 10;
+            attackSpeed -= 0.1f;
+            critChance += 0.2f;
+        }
+                  
      }
 
         void OnMouseExit()
@@ -81,7 +92,7 @@ public class Archer : MonoBehaviour
             //turn white
             GetComponent<Renderer>().material.color = Color.white;
             //hide range
-            //lineRenderer.enabled = false;
+            lineRenderer.enabled = false;
         }
     // Update is called once per frame
     void Update()

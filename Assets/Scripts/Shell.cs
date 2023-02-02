@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shell : MonoBehaviour
 {
     public float damage;
+    public float critChance;
     public float range = 10;
     public float explosionRadius = 5f;
     
@@ -85,7 +86,7 @@ public class Shell : MonoBehaviour
                     float damageDealt = damage * damageMultiplier;
                     //print damage and distance and multiplier
                     print("Damage dealt: " + damageDealt + " Distance: " + distance + " Multiplier: " + damageMultiplier);
-                    hitColliders[i].gameObject.GetComponent<Stat>().TakeDamage(damageDealt);
+                    hitColliders[i].gameObject.GetComponent<Stat>().TakeDamage(damageDealt, critChance);
                 }
                 i++;
                 
@@ -102,6 +103,8 @@ public class Shell : MonoBehaviour
         damage = transform.parent.GetComponent<Archer>().damage;
       //set range to parent's range
         range = transform.parent.GetComponent<Archer>().range;
+        //set critChance to parent's critChance
+        critChance = transform.parent.GetComponent<Archer>().critChance;
         
       GameObject enemy = Find();
       // direct the shell towards the enemy
