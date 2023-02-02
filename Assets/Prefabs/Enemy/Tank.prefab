@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7492130394992020096, guid: 3d83b0efd32db7147a4a0150799e175c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ae4d10ed85abf54dbd1659ebd9b4e9c, type: 2}
     - target: {fileID: 7492130394992020097, guid: 3d83b0efd32db7147a4a0150799e175c,
         type: 3}
       propertyPath: m_Mesh
@@ -15,17 +20,42 @@ PrefabInstance:
     - target: {fileID: 7492130394992020098, guid: 3d83b0efd32db7147a4a0150799e175c,
         type: 3}
       propertyPath: armor
-      value: 30
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492130394992020098, guid: 3d83b0efd32db7147a4a0150799e175c,
+        type: 3}
+      propertyPath: speed
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7492130394992020098, guid: 3d83b0efd32db7147a4a0150799e175c,
         type: 3}
       propertyPath: health
-      value: 200
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492130394992020098, guid: 3d83b0efd32db7147a4a0150799e175c,
+        type: 3}
+      propertyPath: color.b
+      value: 0.023529414
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492130394992020098, guid: 3d83b0efd32db7147a4a0150799e175c,
+        type: 3}
+      propertyPath: color.g
+      value: 0.023529414
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492130394992020098, guid: 3d83b0efd32db7147a4a0150799e175c,
+        type: 3}
+      propertyPath: color.r
+      value: 0.4039216
       objectReference: {fileID: 0}
     - target: {fileID: 7492130394992020098, guid: 3d83b0efd32db7147a4a0150799e175c,
         type: 3}
       propertyPath: mHealth
-      value: 200
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492130394992020098, guid: 3d83b0efd32db7147a4a0150799e175c,
+        type: 3}
+      propertyPath: actualSpeed
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7492130394992020102, guid: 3d83b0efd32db7147a4a0150799e175c,
         type: 3}

@@ -78,30 +78,8 @@ public class Stat : MonoBehaviour
         }
     }
     
-
- 
-    
-    //while colliding with baricade
-    void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.tag == "Baricade")
-        {
-            isSlowed = true;   
-        }
-    }
-    
-    
     void Update()
     {
-        if (isSlowed)
-        {
-            actualSpeed = speed * 0.2f;
-        }
-        else
-        {
-            actualSpeed = speed;
-        }
-        isSlowed = false;
-        
+ 
     }
 }

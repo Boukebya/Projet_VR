@@ -6,34 +6,57 @@ public class SpawnEnemy : MonoBehaviour
 {
 //prefab
 public GameObject basic;
+public GameObject soldier;
 public GameObject tank;
+public GameObject Elite;
+public GameObject flying;
+public GameObject mage;
+public GameObject Commander;
 
 public float delay = 1f;
-    //coroutine
-    IEnumerator Spawn()
+
+    void Spawn()
     {
-        while (true)
-        {
-            //spawn 10 basic enemies, then 1 tank
-            for (int i = 0; i < 10; i++)
+            //if pressed 1 spawn basic enemy
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 Instantiate(basic, transform.position, transform.rotation);
-                yield return new WaitForSeconds(delay);
             }
-            Instantiate(tank, transform.position, transform.rotation);
-            yield return new WaitForSeconds(delay);
-            
-        }
-    }
-    //spawn enemy every 1 second
-    void Start()
-    {
-        StartCoroutine(Spawn());
+            //if pressed 2 spawn soldier enemy
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                Instantiate(soldier, transform.position, transform.rotation);
+            }
+            //if pressed 3 spawn tank enemy
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                Instantiate(tank, transform.position, transform.rotation);
+            }
+            //if pressed 4 spawn elite enemy
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                Instantiate(Elite, transform.position, transform.rotation);
+            }
+            //if pressed 5 spawn flying enemy
+            if (Input.GetKeyDown(KeyCode.Alpha5))
+            {
+                Instantiate(flying, transform.position, transform.rotation);
+            }
+            //if pressed 6 spawn mage enemy
+            if (Input.GetKeyDown(KeyCode.Alpha6))
+            {
+                Instantiate(mage, transform.position, transform.rotation);
+            }
+            //if pressed 7 spawn commander enemy
+            if (Input.GetKeyDown(KeyCode.Alpha7))
+            {
+                Instantiate(Commander, transform.position, transform.rotation);
+            }
     }
     
-    // Update is called once per frame
+
     void Update()
     {
-
+       Spawn(); 
     }
 }

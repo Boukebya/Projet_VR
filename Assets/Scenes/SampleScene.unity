@@ -235,6 +235,7 @@ MonoBehaviour:
   damage: 1
   critChance: 0
   slow: 0.3
+  delay: 0
   baricade: {fileID: 205305204}
 --- !u!4 &205305207
 Transform:
@@ -372,6 +373,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path
       objectReference: {fileID: 0}
+    - target: {fileID: 7545683371995755228, guid: 56229802d32662f40a67debfb27e4d65,
+        type: 3}
+      propertyPath: mage
+      value: 
+      objectReference: {fileID: 7492130394992020125, guid: 0a684b79a3005ed4b9ddff82d22b50e5,
+        type: 3}
+    - target: {fileID: 7545683371995755228, guid: 56229802d32662f40a67debfb27e4d65,
+        type: 3}
+      propertyPath: Elite
+      value: 
+      objectReference: {fileID: 7492130394992020125, guid: 62087d7805a6a4149984e7231b24d46e,
+        type: 3}
+    - target: {fileID: 7545683371995755228, guid: 56229802d32662f40a67debfb27e4d65,
+        type: 3}
+      propertyPath: flying
+      value: 
+      objectReference: {fileID: 7492130394992020125, guid: 0a35d01337629634ab97b28355e958ca,
+        type: 3}
+    - target: {fileID: 7545683371995755228, guid: 56229802d32662f40a67debfb27e4d65,
+        type: 3}
+      propertyPath: soldier
+      value: 
+      objectReference: {fileID: 7492130394992020125, guid: 5a1b925ff3c2b974b8689133afbef7e0,
+        type: 3}
+    - target: {fileID: 7545683371995755228, guid: 56229802d32662f40a67debfb27e4d65,
+        type: 3}
+      propertyPath: Commander
+      value: 
+      objectReference: {fileID: 7492130394992020125, guid: 0e3066cc9d8602844aadb0e99a7db985,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56229802d32662f40a67debfb27e4d65, type: 3}
 --- !u!1 &541096545
