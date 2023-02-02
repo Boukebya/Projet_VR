@@ -14,14 +14,12 @@ public class DamageDisplayer : MonoBehaviour
     {
         //get the damage from parent
         float damage = transform.parent.GetComponent<Stat>().damageTaken;
-        //get isCrit
-        bool isCrit = transform.parent.GetComponent<Stat>().isCrit;
-        
         // arrondir le damage au dixieme le plus proche
         damage = Mathf.Round(damage * 10f) / 10f;
         //display the damage
         text.text = damage.ToString();
         
+<<<<<<< HEAD
         //if isCrit, change color to red
         if (isCrit)
         {
@@ -31,8 +29,10 @@ public class DamageDisplayer : MonoBehaviour
         Destroy(gameObject, 1f);
         //separate the text from the parent
         transform.parent = null;
+=======
+           
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
     }
-    
     void Update()
     {
         transform.LookAt(Camera.main.transform);

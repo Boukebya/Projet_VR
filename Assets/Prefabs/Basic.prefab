@@ -346,7 +346,6 @@ GameObject:
   - component: {fileID: 7492130394992020099}
   - component: {fileID: 7492130394992020098}
   - component: {fileID: 7492130394992020103}
-  - component: {fileID: 5622613443394086994}
   m_Layer: 0
   m_Name: Basic
   m_TagString: Enemy
@@ -449,12 +448,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mHealth: 25
   health: 25
+<<<<<<< HEAD
   isCrit: 0
   armor: 0
   armorReduction: 0
   speed: 10
   deathEffect: {fileID: 5992597017929704906, guid: 9e114efe75030ca4cb66e11f17ad70fb,
     type: 3}
+=======
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
   healthBar: {fileID: 5304230169137944339}
   damageTaken: 0
   displayer: {fileID: 7266989870139503013}
@@ -475,19 +477,4 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 1
---- !u!114 &5622613443394086994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7492130394992020125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2a5e191517b1b847bcafd0d84e86005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  path: {fileID: 994734844765603367, guid: 56229802d32662f40a67debfb27e4d65, type: 3}
-  currentWaypoint: 0
-  speed: 7
+  m_CollisionDetection: 0
