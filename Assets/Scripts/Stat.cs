@@ -12,9 +12,6 @@ public class Stat : MonoBehaviour
     public int armor = 0;
     public float armorReduction = 0;
     public float speed = 10;
-    public float actualSpeed;
-    
-    public bool isSlowed = false;
     
     //death effect
     public GameObject deathEffect;
@@ -29,23 +26,25 @@ public class Stat : MonoBehaviour
     
     //prefab for the damage text
     public GameObject damageTextPrefab;
-    //color
-    public Color color;
 
 
 <<<<<<< HEAD
     //Change Color and size for a short time
-    public void ChangeColor()
+    public void ChangeColor(Color color)
     {
         GetComponent<Renderer>().material.color = Color.red;
-        StartCoroutine(ResetColor());
+        StartCoroutine(ResetColor(color));
         //change randomly the size of the object between 0.9 and 1.1   
     }
     //Reset Color and size
+<<<<<<< HEAD
     IEnumerator ResetColor()
 =======
     // Update is called once per frame
     void Update()
+=======
+    IEnumerator ResetColor(Color color)
+>>>>>>> parent of 76149be (damage adaptation and baricade)
     {
     MoveForward();
     }
@@ -61,12 +60,18 @@ public class Stat : MonoBehaviour
     public void TakeDamage(float damage)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        //get color of the object
+        Color color = GetComponent<Renderer>().material.color;
+>>>>>>> parent of 76149be (damage adaptation and baricade)
         //on hit change to red for 0.1 seconds
-        ChangeColor();
+        ChangeColor(color);
         
         //get armor reduction
         armorReduction = 1 - (Mathf.Log(armor + 1, 2) / 10);
         damageTaken = damage * armorReduction;
+        
         //chance to crit depending on crit chance
         float crit = Random.Range(0f, 1f);
         if (crit <= critChance)
@@ -74,36 +79,42 @@ public class Stat : MonoBehaviour
             damageTaken *= 2;
             isCrit = true;
         }
+<<<<<<< HEAD
 =======
         damageTaken = damage;
 >>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
         health -= damageTaken;
         
+=======
+
+>>>>>>> parent of 76149be (damage adaptation and baricade)
         
+        health -= damageTaken;
         // instantiate damage text as a child of the enemy for 1 second
         GameObject damageText = Instantiate(damageTextPrefab, displayer.position, Quaternion.identity, transform);
         Destroy(damageText, 1f);
         
         
-        //death
         if (health <= 0)
         {
             Destroy(gameObject);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         healthBar.UpdateHealthBar();
 >>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
+=======
+        
+>>>>>>> parent of 76149be (damage adaptation and baricade)
     }
     
-
- 
-    
-    //while colliding with baricade
-    void OnCollisionStay(Collision collision)
+    // detect collision with projectile
+    void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Baricade")
+        if (collision.gameObject.tag == "Projectile")
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
             isSlowed = true;   
         }
@@ -130,4 +141,14 @@ public class Stat : MonoBehaviour
         }
     }
 >>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
+=======
+            //get damage from projectile
+            float damage = collision.gameObject.GetComponent<Arrow>().damage;
+            //get crit chance from projectile
+            float critChance = collision.gameObject.GetComponent<Arrow>().critChance;
+            TakeDamage(damage, critChance);
+        }
+    }
+    
+>>>>>>> parent of 76149be (damage adaptation and baricade)
 }
