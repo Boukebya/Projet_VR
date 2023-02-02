@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1773070421613101022}
   - component: {fileID: 1773070421613101023}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1773070422071169500}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 1773070422697646120}
   - component: {fileID: 1773070422697646121}
   - component: {fileID: 1773070422697646122}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mortar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

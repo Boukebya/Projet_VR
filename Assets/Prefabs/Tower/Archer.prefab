@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7831002326457833035}
   - component: {fileID: 7831002326457833028}
   - component: {fileID: 7831002326457833029}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7831002326897111191}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Projectile Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7831002327551884473}
   - component: {fileID: 7831002327551884474}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
