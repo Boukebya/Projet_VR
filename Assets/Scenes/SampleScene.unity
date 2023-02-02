@@ -177,7 +177,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 6
+=======
+  m_RootOrder: 4
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &158220876 stripped
 GameObject:
@@ -185,6 +189,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 945631406}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &205305204
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,6 +379,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56229802d32662f40a67debfb27e4d65, type: 3}
+=======
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
 --- !u!1 &541096545
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +470,6 @@ MonoBehaviour:
   damage: 5
   attackSpeed: 1
   range: 10
-  critChance: 0.05
   firePoint: {fileID: 1339177128}
   arrowPrefab: {fileID: 390082411444279387, guid: c8a1f3e0443f2e442a4ea92f0d5fce1c,
     type: 3}
@@ -540,14 +546,18 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565006763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.83, y: 1, z: 6.17}
+  m_LocalPosition: {x: -2.2, y: 1, z: 20.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1492081315}
   - {fileID: 1339177128}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 7
+=======
+  m_RootOrder: 5
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> Stashed changes
 --- !u!1 &599916901
@@ -646,11 +656,46 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_RootOrder: 4
 =======
   m_RootOrder: 5
 >>>>>>> Stashed changes
+=======
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &654032266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 654032267}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &654032267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654032266}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2031318145}
+  m_RootOrder: 1
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &663358530 stripped
 GameObject:
@@ -1081,14 +1126,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.15569553, y: 0.6897528, z: -0.15569553, w: 0.6897528}
-  m_LocalPosition: {x: -5.67, y: 4.78, z: 4.06}
+  m_LocalRotation: {x: 0.22018673, y: 0, z: 0, w: 0.9754578}
+  m_LocalPosition: {x: 1.31, y: 4.78, z: -3.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1045848416}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 25.44, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 25.44, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,6 +1355,53 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 842422644}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1690856800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1690856802}
+  - component: {fileID: 1690856801}
+  m_Layer: 0
+  m_Name: EnemySpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1690856801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690856800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d73a4165085a044eb219486100518ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 7492130394992020125, guid: 3d83b0efd32db7147a4a0150799e175c,
+    type: 3}
+  delay: 1
+--- !u!4 &1690856802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690856800}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.85, z: -4.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1725982592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,7 +1452,11 @@ Transform:
   - {fileID: 541096546}
   - {fileID: 1728657556}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+  m_RootOrder: 1
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1728657555
 GameObject:
@@ -1520,6 +1616,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 2033614974}
   m_LocalRotation: {x: -0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1530,6 +1627,22 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -45, y: 0, z: 0}
 --- !u!65 &2033614976
+=======
+  m_GameObject: {fileID: 2031318139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d618604647d76e4ea88d8e1ff426673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 30
+  attackSpeed: 4
+  range: 10
+  firePoint: {fileID: 654032267}
+  arrowPrefab: {fileID: 3398099676778888764, guid: 950fec9be55464c4980ee1878f76939e,
+    type: 3}
+  lineRenderer: {fileID: 968250248}
+--- !u!65 &2031318142
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1592,8 +1705,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033614974}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 =======
 >>>>>>> Stashed changes
+=======
+--- !u!4 &2031318145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031318139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.5, y: 1, z: 9.54}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 968250249}
+  - {fileID: 654032267}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
 --- !u!1001 &2038249430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1897,11 +2030,15 @@ PrefabInstance:
     - target: {fileID: 7831002326457833033, guid: 122f857ff3de3444caa6ae2eddc32ea6,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       value: 10.04
 =======
       value: 14.37
 >>>>>>> Stashed changes
+=======
+      value: 3.89
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
       objectReference: {fileID: 0}
     - target: {fileID: 7831002326457833033, guid: 122f857ff3de3444caa6ae2eddc32ea6,
         type: 3}
@@ -1911,11 +2048,15 @@ PrefabInstance:
     - target: {fileID: 7831002326457833033, guid: 122f857ff3de3444caa6ae2eddc32ea6,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       value: 3.43
 =======
       value: -1.32
 >>>>>>> Stashed changes
+=======
+      value: 20.55
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
       objectReference: {fileID: 0}
     - target: {fileID: 7831002326457833033, guid: 122f857ff3de3444caa6ae2eddc32ea6,
         type: 3}

@@ -5,12 +5,7 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     public float damage;
-    public float critChance;
     public float range = 100f;
-    public float speed = 15f;
-    GameObject close;
-    //particles
-    public GameObject impactEffect;
     
      GameObject Find()
         {
@@ -41,7 +36,8 @@ public class Arrow : MonoBehaviour
 
     void forward(GameObject closestEnemy){
         transform.LookAt(closestEnemy.transform);
-
+        //speed has to get to the enemy in 1 second
+        float speed = 10;
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 
@@ -49,28 +45,20 @@ public class Arrow : MonoBehaviour
     {
     //get damage from parent
     damage = transform.parent.GetComponent<Archer>().damage;
-    //get crit chance from parent
-    critChance = transform.parent.GetComponent<Archer>().critChance;
-    close = Find();
-
     }
 
     // Update is called once per frame
     void Update()
     {           
     //find the closest enemy
-    GameObject stillClose = Find();
-    //speed is getting faster
-    speed += 0.1f;
-    
-    if (stillClose != null && stillClose == close){
+    GameObject close = Find();
+    if (close != null){
         forward(close);
     }
+    //if closestEnemy is null, destroy the arrow
     else{
-        //continue forward
-        transform.Translate(Vector3.forward * Time.deltaTime * 10);
+        Destroy(gameObject);
     }
-
     
     }
     //function to deal damage
@@ -89,11 +77,5 @@ public class Arrow : MonoBehaviour
             DealDamage(collision.gameObject);
             Destroy(gameObject);
         }
-    }
-    //on destroy
-    void OnDestroy()
-    {
-        // spawn particle effect
-        Instantiate(impactEffect, transform.position, transform.rotation);        
     }
 }

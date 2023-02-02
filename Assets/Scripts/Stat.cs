@@ -7,6 +7,7 @@ public class Stat : MonoBehaviour
     public static float maxHealth = 25;
     public float mHealth = maxHealth;
     public float health = maxHealth;
+<<<<<<< HEAD
     public bool isCrit = false;
     public int armor = 0;
     public float armorReduction = 0;
@@ -17,6 +18,8 @@ public class Stat : MonoBehaviour
     
     //death effect
     public GameObject deathEffect;
+=======
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
     
     public HealthBar healthBar;
     
@@ -30,6 +33,7 @@ public class Stat : MonoBehaviour
     public Color color;
 
 
+<<<<<<< HEAD
     //Change Color and size for a short time
     public void ChangeColor()
     {
@@ -39,16 +43,24 @@ public class Stat : MonoBehaviour
     }
     //Reset Color and size
     IEnumerator ResetColor()
+=======
+    // Update is called once per frame
+    void Update()
     {
-        yield return new WaitForSeconds(0.05f);
-        //get back to the original color not white
-        GetComponent<Renderer>().material.color = color;
-
+    MoveForward();
+    }
+    
+    //Move forward with constant speed
+    public void MoveForward()
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
+    {
+        transform.Translate(Vector3.forward * Time.deltaTime * 5);
     }
     
     //take damage
-    public void TakeDamage(float damage, float critChance)
+    public void TakeDamage(float damage)
     {
+<<<<<<< HEAD
         //on hit change to red for 0.1 seconds
         ChangeColor();
         
@@ -62,20 +74,26 @@ public class Stat : MonoBehaviour
             damageTaken *= 2;
             isCrit = true;
         }
+=======
+        damageTaken = damage;
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
         health -= damageTaken;
         
         
         // instantiate damage text as a child of the enemy for 1 second
         GameObject damageText = Instantiate(damageTextPrefab, displayer.position, Quaternion.identity, transform);
-        healthBar.UpdateHealthBar();
+        Destroy(damageText, 1f);
+        
         
         //death
         if (health <= 0)
         {
-            Destroy(gameObject,0.01f);
-            //instantiate death effect
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
+<<<<<<< HEAD
+=======
+        healthBar.UpdateHealthBar();
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
     }
     
 
@@ -86,6 +104,7 @@ public class Stat : MonoBehaviour
     {
         if (collision.gameObject.tag == "Baricade")
         {
+<<<<<<< HEAD
             isSlowed = true;   
         }
     }
@@ -104,4 +123,11 @@ public class Stat : MonoBehaviour
         isSlowed = false;
         
     }
+=======
+            //get damage from projectile
+            float damage = collision.gameObject.GetComponent<Arrow>().damage;
+            TakeDamage(damage);
+        }
+    }
+>>>>>>> parent of 4123b84 (Tower, movement mechanic, stat)
 }
