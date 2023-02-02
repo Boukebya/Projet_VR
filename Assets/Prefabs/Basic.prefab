@@ -453,6 +453,8 @@ MonoBehaviour:
   armor: 0
   armorReduction: 0
   speed: 10
+  actualSpeed: 10
+  isSlowed: 0
   deathEffect: {fileID: 5992597017929704906, guid: 9e114efe75030ca4cb66e11f17ad70fb,
     type: 3}
   healthBar: {fileID: 5304230169137944339}
@@ -460,6 +462,7 @@ MonoBehaviour:
   displayer: {fileID: 7266989870139503013}
   damageTextPrefab: {fileID: 3789624704749649230, guid: a4ef041ccf723114ebd8a01c5196bb53,
     type: 3}
+  color: {r: 0.5764706, g: 0.47058827, b: 0.47058827, a: 0}
 --- !u!54 &7492130394992020103
 Rigidbody:
   m_ObjectHideFlags: 0

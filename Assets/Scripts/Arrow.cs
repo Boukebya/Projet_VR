@@ -73,13 +73,20 @@ public class Arrow : MonoBehaviour
 
     
     }
-    
+    //function to deal damage
+    void DealDamage(GameObject enemy)
+    {
+        //deal damage
+        enemy.GetComponent<Stat>().TakeDamage(damage, critChance);
+    }
     
     //if collides with enemy, destroy arrow
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Floor")
         {
+            //deal damage
+            DealDamage(collision.gameObject);
             Destroy(gameObject);
         }
     }

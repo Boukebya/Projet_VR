@@ -116,6 +116,7 @@ MonoBehaviour:
   damage: 5
   attackSpeed: 1
   range: 10
+  critChance: 1
   firePoint: {fileID: 7831002326897111191}
   arrowPrefab: {fileID: 390082411444279387, guid: c8a1f3e0443f2e442a4ea92f0d5fce1c,
     type: 3}
