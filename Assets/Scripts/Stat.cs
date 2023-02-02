@@ -7,6 +7,13 @@ public class Stat : MonoBehaviour
     public static float maxHealth = 25;
     public float mHealth = maxHealth;
     public float health = maxHealth;
+    public bool isCrit = false;
+    public int armor = 0;
+    public float armorReduction = 0;
+    public float speed = 10;
+    
+    //death effect
+    public GameObject deathEffect;
     
     public HealthBar healthBar;
     
@@ -18,33 +25,55 @@ public class Stat : MonoBehaviour
     public GameObject damageTextPrefab;
 
 
-    // Update is called once per frame
-    void Update()
+    //Change Color and size for a short time
+    public void ChangeColor(Color color)
     {
-    MoveForward();
+        GetComponent<Renderer>().material.color = Color.red;
+        StartCoroutine(ResetColor(color));
+        //change randomly the size of the object between 0.9 and 1.1   
     }
-    
-    //Move forward with constant speed
-    public void MoveForward()
+    //Reset Color and size
+    IEnumerator ResetColor(Color color)
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * 5);
+        yield return new WaitForSeconds(0.05f);
+        //get back to the original color not white
+        GetComponent<Renderer>().material.color = color;
+
     }
     
     //take damage
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, float critChance)
     {
-        damageTaken = damage;
+        //get color of the object
+        Color color = GetComponent<Renderer>().material.color;
+        //on hit change to red for 0.1 seconds
+        ChangeColor(color);
+        
+        //get armor reduction
+        armorReduction = 1 - (Mathf.Log(armor + 1, 2) / 10);
+        damageTaken = damage * armorReduction;
+        
+        //chance to crit depending on crit chance
+        float crit = Random.Range(0f, 1f);
+        if (crit <= critChance)
+        {
+            damageTaken *= 2;
+            isCrit = true;
+        }
+
+        
         health -= damageTaken;
         // instantiate damage text as a child of the enemy for 1 second
         GameObject damageText = Instantiate(damageTextPrefab, displayer.position, Quaternion.identity, transform);
-        Destroy(damageText, 1f);
-        
+        healthBar.UpdateHealthBar();
         
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Destroy(gameObject,0.01f);
+            //instantiate death effect
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
         }
-        healthBar.UpdateHealthBar();
+        
     }
     
     // detect collision with projectile
@@ -54,7 +83,10 @@ public class Stat : MonoBehaviour
         {
             //get damage from projectile
             float damage = collision.gameObject.GetComponent<Arrow>().damage;
-            TakeDamage(damage);
+            //get crit chance from projectile
+            float critChance = collision.gameObject.GetComponent<Arrow>().critChance;
+            TakeDamage(damage, critChance);
         }
     }
+    
 }
