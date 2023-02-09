@@ -85,6 +85,6 @@ public class Stat : MonoBehaviour
                     //add money to the player
                     Player.money += dropMoney;
                     //print money
-                    Debug.Log(Player.money);
+                    //Debug.Log(Player.money);
     }
 }

@@ -96,7 +96,7 @@ public class Shell : MonoBehaviour
                     float damageMultiplier = Mathf.Clamp(1 - (distance / explosionRadius), 0.4f, 1);
                     float damageDealt = damage * damageMultiplier;
                     //print damage and distance and multiplier
-                    print("Damage dealt: " + damageDealt + " Distance: " + distance + " Multiplier: " + damageMultiplier);
+                    //print("Damage dealt: " + damageDealt + " Distance: " + distance + " Multiplier: " + damageMultiplier);
                     hitColliders[i].gameObject.GetComponent<Stat>().TakeDamage(damageDealt, critChance);
                 }
                 i++;

@@ -35,7 +35,7 @@ public class DamageDisplayer : MonoBehaviour
         transform.parent = null;
     }
     
-    void Update()
+    void FixedUpdate()
     {
         transform.LookAt(Camera.main.transform);
         transform.Rotate(0, 180, 0);

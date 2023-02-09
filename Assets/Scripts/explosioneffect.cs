@@ -5,7 +5,7 @@ using UnityEngine;
 public class explosioneffect : MonoBehaviour
 {
 
-    void Update()
+    void FixedUpdate()
     {
         //make it expanse with time and fade out
         transform.localScale += new Vector3(0.6f, 0.6f, 0.6f);
