@@ -33,7 +33,7 @@ public float delay = 1f;
         Instantiate(enemy, path.transform.GetChild(0).position, transform.rotation).GetComponent<Movement>().path = path;
     }
     
-    void Spawn()
+    void SpawnSelf()
     {
             //wait for input from 1 to 7
             if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -65,10 +65,41 @@ public float delay = 1f;
                 InstantiateEnemy(Commander);
             }
     }
-    
-
-    void Update()
+    bool cooldown = false;
+        //function coroutine for delay between spawns
+        IEnumerator Cooldown(float delay)
+        {
+            cooldown = true;
+            yield return new WaitForSeconds(delay);
+            cooldown = false;
+        }
+        
+    //wave management
+    void WaveManagement()
     {
-       Spawn(); 
+        //wave 1
+        StartCoroutine(Wave(5));
+    }
+
+    // Wave
+     IEnumerator Wave(int enemies)
+    {
+       for (int i = 0; i < 5; i++)
+       {
+            for (int j = 0; (j < enemies); j++)
+            {
+                yield return new WaitForSeconds(0.2f);
+                InstantiateEnemy(basic);
+                
+            }
+           yield return new WaitForSeconds(5);
+       }
+        
+    }
+   
+    void Start()
+    {
+       SpawnSelf(); 
+       WaveManagement();
     }
 }
