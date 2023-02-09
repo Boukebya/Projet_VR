@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4dfd34a8e1bf599499c7a537f8e914a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
   damage: 5
   attackSpeed: 1
   range: 10
-  critChance: 1
+  critChance: 0.05
   firePoint: {fileID: 7831002326897111191}
   arrowPrefab: {fileID: 390082411444279387, guid: c8a1f3e0443f2e442a4ea92f0d5fce1c,
     type: 3}

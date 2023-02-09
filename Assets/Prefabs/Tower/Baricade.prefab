@@ -11,10 +11,6 @@ GameObject:
   - component: {fileID: 3519552878674326669}
   - component: {fileID: 3519552878674326668}
   - component: {fileID: 3519552878674326671}
-  - component: {fileID: 3519552878674326657}
-  - component: {fileID: 3519552878674326656}
-  - component: {fileID: 3519552878674326659}
-  - component: {fileID: 3519552878674326658}
   m_Layer: 3
   m_Name: Baricade
   m_TagString: Baricade
@@ -54,7 +50,7 @@ MonoBehaviour:
   damage: 1
   critChance: 0
   slow: 0.3
-  delay: 0
+  delay: 0.2
   baricade: {fileID: 3519552878674326670}
 --- !u!65 &3519552878674326671
 BoxCollider:
@@ -67,60 +63,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.037377708, y: 1, z: 2.2160442}
-  m_Center: {x: -0.5878076, y: 0, z: -0.0464406}
---- !u!65 &3519552878674326657
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3519552878674326670}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.037377708, y: 1, z: 2.2160442}
-  m_Center: {x: -0.38, y: 0, z: -0.0464406}
---- !u!65 &3519552878674326656
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3519552878674326670}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.037377708, y: 1, z: 2.2160442}
-  m_Center: {x: -0.14, y: 0, z: -0.0464406}
---- !u!65 &3519552878674326659
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3519552878674326670}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.037377708, y: 1, z: 2.2160442}
-  m_Center: {x: 0.11, y: 0, z: -0.0464406}
---- !u!65 &3519552878674326658
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3519552878674326670}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.037377708, y: 1, z: 2.2160442}
-  m_Center: {x: 0.34, y: 0, z: -0.0464406}
+  m_Size: {x: 1, y: 1.2533776, z: 2.9925153}
+  m_Center: {x: 6.915194e-16, y: 0.12668878, z: -0.20133859}
 --- !u!1 &3519552878749743079
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +127,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4dfd34a8e1bf599499c7a537f8e914a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -280,7 +224,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4dfd34a8e1bf599499c7a537f8e914a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

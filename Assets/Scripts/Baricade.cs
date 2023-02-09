@@ -15,19 +15,12 @@ public class Baricade : MonoBehaviour
     //on collision with enemy
         void OnCollisionStay(Collision collision)
         {
-            if (collision.gameObject.tag == "Enemy")
+            if (collision.gameObject.tag == "Enemy" && !onCooldown)
             {
-                //deal damage every delay
-                if (!onCooldown)
-                {
-                    //damage enemy
-                     collision.gameObject.GetComponent<Stat>().TakeDamage(damage, critChance);
-                    StartCoroutine(Cooldown());
-                }
-                //slow enemy
+                collision.gameObject.GetComponent<Stat>().TakeDamage(damage, critChance);
                 collision.gameObject.GetComponent<Stat>().isSlowed = true;
                 collision.gameObject.GetComponent<Stat>().actualSpeed = collision.gameObject.GetComponent<Stat>().speed * slow;
-                
+                StartCoroutine(Cooldown());
             }
         }
         //on collision exit
@@ -46,6 +39,6 @@ public class Baricade : MonoBehaviour
             onCooldown = true;
             yield return new WaitForSeconds(delay);
             onCooldown = false;
-        }
+         }
         
 }

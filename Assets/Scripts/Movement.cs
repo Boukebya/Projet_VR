@@ -24,6 +24,10 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    //while path is not null
+        if (path != null)
+        {
+        
         //get speed from Stat
         speed = GetComponent<Stat>().actualSpeed;
     
@@ -49,5 +53,6 @@ public class Movement : MonoBehaviour
             Destroy(gameObject);
         }
         
+    }
     }
 }

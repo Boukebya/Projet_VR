@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 515842752644254912}
   - component: {fileID: 4070811145170419721}
   - component: {fileID: 6727583030919433848}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 5356472218451444639}
   - component: {fileID: 4484544895862009964}
   - component: {fileID: 7174795512820210071}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b2f79591f8229644aad24d81f92781d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -182,7 +182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7266989870139503013}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DamageDisplayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 2206074792928003376}
   - component: {fileID: 3758719469891543840}
   - component: {fileID: 1134694864472390005}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Healthbar Inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 3335238590960155545}
   - component: {fileID: 431378368552240674}
   - component: {fileID: 5969761995381290326}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b2f79591f8229644aad24d81f92781d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 2804033634814924096}
   - component: {fileID: 8569835323116617190}
   - component: {fileID: 2312736298679640639}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 1601684409672471844}
   - component: {fileID: 1358062683765777769}
   - component: {fileID: 934407537915198523}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +541,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b2f79591f8229644aad24d81f92781d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -586,7 +586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8900144413363322329}
   - component: {fileID: 5304230169137944339}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 7492130394992020098}
   - component: {fileID: 7492130394992020103}
   - component: {fileID: 5622613443394086994}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mage
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -756,7 +756,7 @@ MonoBehaviour:
   displayer: {fileID: 7266989870139503013}
   damageTextPrefab: {fileID: 3789624704749649230, guid: a4ef041ccf723114ebd8a01c5196bb53,
     type: 3}
-  color: {r: 0.74509805, g: 0.6627451, b: 0.6627451, a: 0}
+  color: {r: 0.6039216, g: 0.5254902, b: 0.5254902, a: 0}
 --- !u!54 &7492130394992020103
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -785,6 +785,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a5e191517b1b847bcafd0d84e86005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: {fileID: 994734844765603367, guid: 56229802d32662f40a67debfb27e4d65, type: 3}
+  path: {fileID: 0}
   currentWaypoint: 0
   speed: 7

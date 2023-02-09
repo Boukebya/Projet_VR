@@ -15,42 +15,54 @@ public GameObject Commander;
 
 public float delay = 1f;
 
+    //gameobject path left
+    public GameObject pathLeft;
+    //gameobject path right
+    public GameObject pathRight;
+    //gameobject path inner
+    public GameObject pathInner;
+    
+    //function to give random path
+    public GameObject RandomPath()
+    {
+        return new GameObject[] {pathLeft, pathRight, pathInner}[Random.Range(0, 3)];
+    }
+    public void InstantiateEnemy(GameObject enemy)
+    {
+        GameObject path = RandomPath();
+        Instantiate(enemy, path.transform.GetChild(0).position, transform.rotation).GetComponent<Movement>().path = path;
+    }
+    
     void Spawn()
     {
-            //if pressed 1 spawn basic enemy
+            //wait for input from 1 to 7
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                Instantiate(basic, transform.position, transform.rotation);
+                InstantiateEnemy(basic);
             }
-            //if pressed 2 spawn soldier enemy
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                Instantiate(soldier, transform.position, transform.rotation);
+                InstantiateEnemy(soldier);
             }
-            //if pressed 3 spawn tank enemy
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                Instantiate(tank, transform.position, transform.rotation);
+                InstantiateEnemy(tank);
             }
-            //if pressed 4 spawn elite enemy
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
-                Instantiate(Elite, transform.position, transform.rotation);
+                InstantiateEnemy(Elite);
             }
-            //if pressed 5 spawn flying enemy
             if (Input.GetKeyDown(KeyCode.Alpha5))
             {
-                Instantiate(flying, transform.position, transform.rotation);
+                InstantiateEnemy(flying);
             }
-            //if pressed 6 spawn mage enemy
             if (Input.GetKeyDown(KeyCode.Alpha6))
             {
-                Instantiate(mage, transform.position, transform.rotation);
+                InstantiateEnemy(mage);
             }
-            //if pressed 7 spawn commander enemy
             if (Input.GetKeyDown(KeyCode.Alpha7))
             {
-                Instantiate(Commander, transform.position, transform.rotation);
+                InstantiateEnemy(Commander);
             }
     }
     

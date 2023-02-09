@@ -11,6 +11,17 @@ public class Shell : MonoBehaviour
     
     public float firingAngle = 45.0f;
     public float gravity = 9.8f;
+    
+    // explosion effect
+    public GameObject explosion;
+    
+    //on destroy, instantiate explosion effect
+    void OnDestroy()
+    {
+       // instantiate and make it its own child
+        GameObject explosionEffect = Instantiate(explosion, transform.position, transform.rotation);
+        explosionEffect.transform.parent = transform;
+       }
 
     GameObject Find()
             {
