@@ -710,6 +710,7 @@ MonoBehaviour:
   armorReduction: 0
   speed: 5
   actualSpeed: 5
+  dropMoney: 50
   isSlowed: 0
   deathEffect: {fileID: 5992597017929704906, guid: 9e114efe75030ca4cb66e11f17ad70fb,
     type: 3}

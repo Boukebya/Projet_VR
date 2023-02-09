@@ -8,11 +8,16 @@ public class Archer : MonoBehaviour
     public float attackSpeed;
     public float range = 100;
     public float critChance = 0.05f;
+    public int cost = 50;
     
     public Transform firePoint;
     public GameObject arrowPrefab;
     //get line renderer from children
     public LineRenderer lineRenderer;
+    
+    //gameobject to show a UI element
+    public GameObject UI;
+    
     
     //function to find the closest enemy
     void Find()
@@ -79,10 +84,9 @@ public class Archer : MonoBehaviour
         //if left mouse button is pressed upgrade tower by increasing range,damage and attack speed
         if (Input.GetMouseButtonDown(0))
         {
-            range += 10;
-            damage += 10;
-            attackSpeed -= 0.1f;
-            critChance += 0.2f;
+            //show UI
+            UI.SetActive(true);
+            
         }
                   
      }
@@ -94,6 +98,12 @@ public class Archer : MonoBehaviour
             //hide range
             lineRenderer.enabled = false;
         }
+        
+    void Start()
+    {
+        //hide UI
+        UI.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {

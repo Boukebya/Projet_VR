@@ -190,7 +190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773070422697646124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.67, y: 1, z: 4.83}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -278,6 +278,7 @@ MonoBehaviour:
   attackSpeed: 4
   range: 10
   critChance: 0.05
+  cost: 100
   firePoint: {fileID: 1773070422071169500}
   arrowPrefab: {fileID: 3398099676778888764, guid: 950fec9be55464c4980ee1878f76939e,
     type: 3}

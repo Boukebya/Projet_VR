@@ -54,6 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7492130394992020098, guid: 3d83b0efd32db7147a4a0150799e175c,
         type: 3}
+      propertyPath: dropMoney
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492130394992020098, guid: 3d83b0efd32db7147a4a0150799e175c,
+        type: 3}
       propertyPath: actualSpeed
       value: 3.5
       objectReference: {fileID: 0}

@@ -12,6 +12,7 @@ public class Stat : MonoBehaviour
     public float armorReduction = 0;
     public float speed = 10;
     public float actualSpeed;
+    public int dropMoney = 5;
     
     public bool isSlowed = false;
     
@@ -78,8 +79,12 @@ public class Stat : MonoBehaviour
         }
     }
     
-    void Update()
+    //On destroy
+    void OnDestroy()
     {
- 
+                    //add money to the player
+                    Player.money += dropMoney;
+                    //print money
+                    Debug.Log(Player.money);
     }
 }
