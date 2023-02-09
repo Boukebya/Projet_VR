@@ -283,3 +283,4 @@ MonoBehaviour:
   arrowPrefab: {fileID: 3398099676778888764, guid: 950fec9be55464c4980ee1878f76939e,
     type: 3}
   lineRenderer: {fileID: 1773070421613101023}
+  UI: {fileID: 0}
