@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7831002326457833035}
   - component: {fileID: 7831002326457833028}
   - component: {fileID: 7831002326457833029}
+  - component: {fileID: 606217260332625221}
   m_Layer: 3
   m_Name: Flamethrower
   m_TagString: Untagged
@@ -118,10 +119,33 @@ MonoBehaviour:
   range: 10
   critChance: 0.05
   cost: 50
+  level: 1
   firePoint: {fileID: 7831002326897111191}
   arrowPrefab: {fileID: 390082411444279387, guid: c8a1f3e0443f2e442a4ea92f0d5fce1c,
     type: 3}
   lineRenderer: {fileID: 7831002327551884474}
+--- !u!114 &606217260332625221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7831002326457833030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98839e544cc5b0448b492ecfc1e435a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMultiplier: 1
+  fixedDamage: 5
+  costMultiplier: 1
+  fixedCost: 5
+  rangeMultiplier: 1
+  fixedRange: 5
+  attackSpeedMultiplier: 1
+  fixedAs: 5
+  critChanceMultiplier: 1
+  fixedcrit: 5
 --- !u!1 &7831002326897111184
 GameObject:
   m_ObjectHideFlags: 0

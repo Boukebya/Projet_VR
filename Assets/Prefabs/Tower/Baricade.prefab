@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3519552878674326668}
   - component: {fileID: 3519552878674326671}
   - component: {fileID: 6200684186866318848}
+  - component: {fileID: 5881850587151914967}
   m_Layer: 3
   m_Name: Baricade
   m_TagString: Baricade
@@ -83,9 +84,32 @@ MonoBehaviour:
   range: 0
   critChance: 0
   cost: 40
+  level: 1
   firePoint: {fileID: 0}
   arrowPrefab: {fileID: 0}
   lineRenderer: {fileID: 0}
+--- !u!114 &5881850587151914967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3519552878674326670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98839e544cc5b0448b492ecfc1e435a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMultiplier: 1
+  fixedDamage: 5
+  costMultiplier: 1
+  fixedCost: 5
+  rangeMultiplier: 1
+  fixedRange: 5
+  attackSpeedMultiplier: 1
+  fixedAs: 5
+  critChanceMultiplier: 1
+  fixedcrit: 5
 --- !u!1 &3519552878749743079
 GameObject:
   m_ObjectHideFlags: 0

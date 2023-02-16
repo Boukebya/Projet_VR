@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 7420982096158116907}
   - component: {fileID: 7420982096158116906}
   - component: {fileID: 1142367248361358146}
+  - component: {fileID: 7941835731811523779}
   m_Layer: 3
   m_Name: Machine gun
   m_TagString: Untagged
@@ -312,8 +313,30 @@ MonoBehaviour:
   range: 100
   critChance: 0.05
   cost: 80
+  level: 1
   firePoint: {fileID: 7420982094481944539}
   arrowPrefab: {fileID: 7791216894609560142, guid: 4a56a62bac395e94d8783229f7987102,
     type: 3}
   lineRenderer: {fileID: 0}
-  UI: {fileID: 0}
+--- !u!114 &7941835731811523779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7420982096158116897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98839e544cc5b0448b492ecfc1e435a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMultiplier: 1
+  fixedDamage: 5
+  costMultiplier: 1
+  fixedCost: 5
+  rangeMultiplier: 1
+  fixedRange: 5
+  attackSpeedMultiplier: 1
+  fixedAs: 5
+  critChanceMultiplier: 1
+  fixedcrit: 5
