@@ -1,0 +1,37 @@
+units_in_meters: 1
+sensor_setup {
+  wrist_pos_sensor: ExternalController
+  wrist_rot_sensor: ExternalController
+  finger_pose_sensor: ExternalController
+  finger_control_type: BY_ANIMATION
+  sensor_origin_position {
+    x: -1461
+    y: 361
+    z: 1126
+  }
+  sensor_origin_rotation {
+    y: 1
+  }
+}
+control_setup {
+  gesture_duration: 0.1
+  form_push_gesture: true
+  mode_interpolation_duration {
+    grasp: 0.01
+    hold: 0.1
+    release: 0.1
+    empty: 0.1
+  }
+  grasp_selection_pos_thresh: 1
+  grasp_selection_rot_thresh: 0.5
+  grasp_selection_pos_weight: 0.5
+  grasp_selection_rot_weight: 0.5
+  push_angle_thresh: 2.61799383
+}
+avatar {
+  scale: 1
+  instance_id: -512100
+  avatar_hash: 1269503502
+  hand_hash: 1949468064
+  hand_hash: 3674342058
+}

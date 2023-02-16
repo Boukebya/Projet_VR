@@ -1,0 +1,3 @@
+Initialized VirtualGrasp SDK (version 1.0.0-free).[VG] [2023-02-16 16:44:58.091] [HandMetaData] [info] Saved debug avatar file Assets/vg_tmp/humanoid_hand_1269503502.bin
+[VirtualGrasp] Registered avatar with id: -512100No .db file found, even not fallback ./Assets/ThirdParty/VirtualGrasp/Data/vg_onboarding.db. No grasps baked.[VG] [2023-02-16 16:44:58.111] [SelectableScene] [info] Successfully saved scene setup to Assets/vg_tmp/SampleScene.scn!
+[VG] [2023-02-16 16:44:58.114] [SelectableScene] [info] Successfully saved object rig to Assets/vg_tmp/SampleScene.scn.objrig!
