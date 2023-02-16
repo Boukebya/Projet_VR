@@ -307,11 +307,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d618604647d76e4ea88d8e1ff426673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  attackSpeed: 0
+  damage: 3
+  attackSpeed: 0.1
   range: 100
   critChance: 0.05
   cost: 80
-  firePoint: {fileID: 0}
-  arrowPrefab: {fileID: 0}
+  firePoint: {fileID: 7420982094481944539}
+  arrowPrefab: {fileID: 7791216894609560142, guid: 4a56a62bac395e94d8783229f7987102,
+    type: 3}
   lineRenderer: {fileID: 0}
+  UI: {fileID: 0}

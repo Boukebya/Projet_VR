@@ -65,41 +65,86 @@ public float delay = 1f;
                 InstantiateEnemy(Commander);
             }
     }
-    bool cooldown = false;
-        //function coroutine for delay between spawns
-        IEnumerator Cooldown(float delay)
+
+   
+    IEnumerator SpawnWave()
+    {
+        StartCoroutine(Wave());
+        yield return new WaitUntil(() => GameObject.FindGameObjectsWithTag("Enemy").Length == 0);
+        yield return new WaitForSeconds(5f);
+        wave++;
+        isOver = true;
+    }
+    
+    IEnumerator Wave()
+    {
+    
+        //spawn enemies in list enemies
+        foreach (GameObject enemy in enemies)
         {
-            cooldown = true;
-            yield return new WaitForSeconds(delay);
-            cooldown = false;
+            InstantiateEnemy(enemy);
+            yield return new WaitForSeconds(0.25f);
         }
         
-    //wave management
-    void WaveManagement()
-    {
-        //wave 1
-        StartCoroutine(Wave(5));
+     //if wave modulo 1, add 1 basic enemy to list enemies
+        if (wave % 1 == 0)
+        {
+            enemies.Add(basic);
+        }
+        //if wave modulo 2, add 1 soldier enemy to list enemies
+        if (wave % 3 == 0)
+        {
+            enemies.Add(soldier);
+        }
+        //if wave modulo 3, add 1 tank enemy to list enemies
+        if (wave % 5 == 0)
+        {
+            enemies.Add(tank);
+        }
+        //if wave modulo 4, add 1 Elite enemy to list enemies
+        if (wave % 7 == 0)
+        {
+            enemies.Add(Elite);
+        }
+        //if wave modulo 5, add 1 flying enemy to list enemies
+        if (wave % 8 == 0)
+        {
+            enemies.Add(flying);
+        }
+        //if wave modulo 6, add 1 mage enemy to list enemies
+        if (wave % 10 == 0)
+        {
+            enemies.Add(mage);
+        }
+        //if wave modulo 7, add 1 Commander enemy to list enemies
+        if (wave % 15 == 0)
+        {
+            enemies.Add(Commander);
+        }     
     }
-
-    // Wave
-     IEnumerator Wave(int enemies)
-    {
-       for (int i = 0; i < 5; i++)
-       {
-            for (int j = 0; (j < enemies); j++)
-            {
-                yield return new WaitForSeconds(0.2f);
-                InstantiateEnemy(basic);
-                
-            }
-           yield return new WaitForSeconds(5);
-       }
-        
-    }
+    
    
+    //liste of enemies
+    List<GameObject> enemies = new List<GameObject>();    
+    bool isOver = true;
+    int wave = 1;
+    
     void Start()
     {
-       SpawnSelf(); 
-       WaveManagement();
+        enemies.Add(basic);
+        enemies.Add(basic);
+        enemies.Add(soldier);
+    }
+    
+    void Update()
+    {
+       // spawn 1 more enemy every wave, each wave ends when all enemies are dead and after 5 seconds
+       // enemy spawn is spaced out by 0.15f
+        if (isOver)
+        {
+            isOver = false;
+            print("Wave " + wave);
+            StartCoroutine(SpawnWave());
+        }
     }
 }

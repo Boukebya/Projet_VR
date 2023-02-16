@@ -50,6 +50,10 @@ public class Movement : MonoBehaviour
         //if we reached the end of the path, destroy
         else
         {
+        //go to script named Player and reduce health by dropmoney
+        Player.health -= GetComponent<Stat>().dropMoney;
+        //set dropmoney to 0
+        GetComponent<Stat>().dropMoney = 0;
             Destroy(gameObject);
         }
         

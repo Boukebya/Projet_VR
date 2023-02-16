@@ -6,7 +6,7 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
-    public int health;
+    public static int health = 100;
     public static int money = 100;
     public TMP_Text text_hp;
     public TMP_Text text_money;
@@ -42,6 +42,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+            //if hp 0 text hp equals dead
+            if (health <= 0)
+            {
+                text_hp.text = "Dead, change scene idk..";
+            }
+            else{
         //display the money
         text_money.text = money.ToString();
         //display the hp
@@ -52,6 +58,8 @@ public class Player : MonoBehaviour
                     //spawn Archer prefab
                     InstantiateTower(Archer);
                 }
+             }
+
     }
     
     
