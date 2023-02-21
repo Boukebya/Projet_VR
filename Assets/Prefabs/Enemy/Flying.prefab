@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.29803923, g: 0.29803923, b: 0.29803923, a: 1}
+  m_Color: {r: 0.29803923, g: 0.29803923, b: 0.29803923, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -650,6 +650,7 @@ MonoBehaviour:
   armorReduction: 0
   speed: 10
   actualSpeed: 10
+  dropMoney: 5
   isSlowed: 0
   deathEffect: {fileID: 5992597017929704906, guid: 9e114efe75030ca4cb66e11f17ad70fb,
     type: 3}
